@@ -7,7 +7,6 @@ const Home = () => {
 	return (
 		<div className="text-center">
 			<SecondCounter />
-			<BetterCounter />
 		</div>
 	);
 };
