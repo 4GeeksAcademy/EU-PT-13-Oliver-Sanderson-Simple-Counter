@@ -13,7 +13,7 @@ function SecondCounter() {
       <Card displaySec={"0"} />
     </React.Fragment>
   )
-  let secondsArray = ["000000"]
+  let secondsArray = []
 
   const leadingZeros = (numberString) => {
     let newNumberString = numberString
@@ -33,15 +33,23 @@ function SecondCounter() {
       return (clearInterval(interval))}; // important to clearInterval to stop the interval once component is unmounted
   }, []);
 
+  
+
 
 
   return (
-    <div className="bg-dark text-light d-flex justify-content-center">
-      <div className="card bg-dark border-secondary numberCard m-3 pt-5 fs-1"><i class="fa-regular fa-clock"></i></div>
+    <React.Fragment>
+      <div className="bg-dark text-light d-flex justify-content-center">
+        <div className="card bg-dark border-secondary numberCard m-3 pt-5 fs-1"><i class="fa-regular fa-clock"></i></div>
 
-      {test}
-
-    </div>
+        {test}
+      </div>
+      <div className="bg-dark text-light d-flex justify-content-center">
+        <button className="btn btn-primary border-secondary m-2" onClick={ () => {console.log("buton")}}>Pause Timer</button>
+        <button className="btn btn-success border-secondary m-2">Resume Timer</button>
+        <button className="btn btn-danger border-secondary m-2 " onClick={ () => {setCounter(-1)}}>Reset Timer</button>
+      </div>
+    </React.Fragment>
   );
 }
 
