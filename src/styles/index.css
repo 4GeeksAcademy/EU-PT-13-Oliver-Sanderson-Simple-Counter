@@ -15,7 +15,12 @@
     border: red 1px dashed;
 } */
 
+body {
+    background-color: #212529;
+}
+
 .numberCard {
     width: 100px;
     height: 150px;
 }
+

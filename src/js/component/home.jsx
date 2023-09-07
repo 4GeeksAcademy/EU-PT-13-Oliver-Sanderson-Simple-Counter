@@ -5,6 +5,7 @@ import CountDown from "./countDown";
 
 //create your first component
 const Home = () => {
+
 	return (
 		<div className="text-center">
 			<SecondCounter />
